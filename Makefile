@@ -6,13 +6,13 @@
 #    By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 00:32:16 by tliangso          #+#    #+#              #
-#    Updated: 2022/09/14 20:35:54 by tliangso         ###   ########.fr        #
+#    Updated: 2022/09/14 21:41:14 by tliangso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 DIRSRC	=	./
 
-SRC		=	ft_printf.c utils.c libft/ft_putchar_fd.c libft/ft_putnbr_fd.c libft/ft_putstr_fd.c libft/ft_strchr.c libft/ft_strlen.c
+SRC		=	ft_printf.c utils.c utils2.c libft/ft_putchar_fd.c libft/ft_putnbr_fd.c libft/ft_putstr_fd.c libft/ft_strchr.c libft/ft_strlen.c
 
 BONUS	=
 

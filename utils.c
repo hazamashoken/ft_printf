@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 10:30:38 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 21:37:22 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 21:51:19 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,29 +94,4 @@ void	ft_printhex(size_t x, const char *format)
 	free (res);
 }
 
-size_t	ft_intlen(long int nb, int div)
-{
-	int			i;
-	long int	number;
-	int			neg;
 
-	i = 0;
-	if (!nb)
-		return (i);
-	if (nb < 0)
-	{
-		neg = 1;
-		number = -nb;
-	}
-	else
-	{
-		neg = 0;
-		number = nb;
-	}
-	while (number)
-	{
-		number /= div;
-		i++;
-	}
-	return (i + neg);
-}

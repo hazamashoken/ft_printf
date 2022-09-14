@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 18:58:11 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 20:57:58 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 21:53:05 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,11 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(n + '0', fd);
 }
 
-void	ft_putnnbr_fd(long int n, int fd)
+void	ft_putnnbr_fd(unsigned int n, int fd)
 {
 	if (fd < 0)
 		return ;
-	if (n == INTMIN)
-		ft_putstr_fd(INTMINSTR, fd);
-	else if (n < 0)
+	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
 		n = -n;
