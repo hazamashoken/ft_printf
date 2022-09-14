@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 10:30:38 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 21:51:19 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 21:56:30 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void	ft_printchr(va_list args, t_sc *sc)
 
 void	ft_printint(va_list args, t_sc *sc, const char *format)
 {
-	long int	u;
-	int			d;
+	unsigned int	u;
+	int				d;
 
 	if (*format == 'u')
 	{
