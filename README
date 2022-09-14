@@ -1,0 +1,12 @@
+TODO:
+	printf format reader
+	print function
+	parser function
+
+REMARK:
+	combine i d u ?
+
+LINKS:
+	https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm
+	https://en.cppreference.com/w/c/variadic/va_arg
+
