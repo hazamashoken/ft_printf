@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 10:30:38 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 21:31:18 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 21:37:22 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_printint(va_list args, t_sc *sc, const char *format)
 	{
 		u = va_arg(args, long int);
 		ft_putnnbr_fd(u, 1);
-		sc->len += ft_intlen(u, 10) - 1;
+		sc->len += ft_intlen(u, 10);
 	}
 	else
 	{
