@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 00:26:25 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 21:20:14 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 22:00:41 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ const char	*ft_search_args(va_list args, const char *format, t_sc *sc)
 	else if (*format == 's')
 		ft_printstr(args, sc);
 	else if (*format == 'p')
-		;//ft_printaddr(args, sc);
+		ft_printaddr(args, sc);
 	else if (*format == 'd' || *format == 'i' || *format == 'u')
 		ft_printint(args, sc, format);
 	else if (*format == 'x' || *format == 'X')

@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 21:40:37 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 21:51:45 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 22:08:40 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,13 @@ size_t	ft_intlen(long int nb, int div)
 		i++;
 	}
 	return (i + neg);
+}
+
+void	ft_printaddr(va_list args, t_sc *sc)
+{
+	void	*addr;
+
+	addr = (void *)va_arg(args, size_t);
+	ft_printhex((size_t)addr, "x");
+	sc->len += ft_intlen((size_t)addr, 16);
 }
