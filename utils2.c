@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 21:40:37 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 22:33:25 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 22:50:57 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,40 @@ size_t	ft_intlen(long int nb, int div)
 	return (i + neg);
 }
 
+static int	ft_printhexaddr(size_t x, const char *format)
+{
+	char	*hex;
+	int		*res;
+	int		i;
+	int		len;
+
+	if (*format == 'x')
+		hex = "0123456789abcdef";
+	else
+		hex = "0123456789ABCDEF";
+	i = 0;
+	res = (int *)malloc(sizeof(int) * ft_intlen((x), 16));
+	if (res == NULL)
+		return (0);
+	while (x >= 16)
+	{
+		*(res + i) = hex[x % 16];
+		x /= 16;
+		i++;
+	}
+	*(res + i) = hex[x];
+	len = i;
+	while (i >= 0)
+		ft_putchar_fd(res[i--], 1);
+	free (res);
+	return (len);
+}
+
 void	ft_printaddr(va_list args, t_sc *sc)
 {
 	void	*addr;
 
 	addr = (void *)va_arg(args, size_t);
 	write(1, "0x", 2);
-	sc->len += ft_printhex((size_t)addr, "x") + 3;
+	sc->len += ft_printhexaddr((size_t)addr, "x") + 3;
 }

@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 10:30:38 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 22:46:58 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 22:53:19 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,16 +56,7 @@ void	ft_printstr(va_list args, t_sc *sc)
 	}
 }
 
-void	ft_hex(va_list args, t_sc *sc, const char *format)
-{
-	size_t	x;
-
-	x = va_arg(args, size_t);
-	ft_printhex((size_t)x, format);
-	sc->len += ft_intlen((size_t)x, 16);
-}
-
-int	ft_printhex(unsigned int x, const char *format)
+static int	ft_printhex(unsigned int x, const char *format)
 {
 	char	*hex;
 	int		*res;
@@ -92,4 +83,13 @@ int	ft_printhex(unsigned int x, const char *format)
 		ft_putchar_fd(res[i--], 1);
 	free (res);
 	return (len);
+}
+
+void	ft_hex(va_list args, t_sc *sc, const char *format)
+{
+	size_t	x;
+
+	x = va_arg(args, size_t);
+	ft_printhex((size_t)x, format);
+	sc->len += ft_intlen((size_t)x, 16);
 }

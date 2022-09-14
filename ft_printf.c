@@ -6,13 +6,13 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 00:26:25 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 22:00:41 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 22:51:17 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"ft_printf.h"
 
-const char	*ft_search_args(va_list args, const char *format, t_sc *sc)
+static const char	*ft_search_args(va_list args, const char *format, t_sc *sc)
 {
 	if (*format == 'c')
 		ft_printchr(args, sc);
@@ -35,7 +35,7 @@ const char	*ft_search_args(va_list args, const char *format, t_sc *sc)
 	return (format);
 }
 
-const char	*ft_read_text(t_sc *sc, const char *format)
+static const char	*ft_read_text(t_sc *sc, const char *format)
 {
 	char	*next;
 
