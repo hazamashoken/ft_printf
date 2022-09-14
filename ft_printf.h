@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 00:26:58 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 21:19:21 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 21:31:49 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ typedef struct s_sc
 	size_t	width;
 }	t_sc;
 
-size_t	ft_intlen(int nb, int div);
+size_t	ft_intlen(long int nb, int div);
 
 void	ft_printchr(va_list args, t_sc *sc);
 void	ft_printhex(size_t x, const char *format);

@@ -4,7 +4,8 @@ TODO:
 	parser function
 
 REMARK:
-	combine i d u ?
+	i / d : LONG_MIN  zero
+
 
 LINKS:
 	https://www.tutorialspoint.com/c_standard_library/c_function_printf.htm
