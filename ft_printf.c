@@ -6,16 +6,16 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 00:26:25 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 20:59:44 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 21:20:14 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libftprintf.h"
+#include	"ft_printf.h"
 
 const char	*ft_search_args(va_list args, const char *format, t_sc *sc)
 {
 	if (*format == 'c')
-		;
+		ft_printchr(args, sc);
 	else if (*format == 's')
 		ft_printstr(args, sc);
 	else if (*format == 'p')
@@ -24,6 +24,11 @@ const char	*ft_search_args(va_list args, const char *format, t_sc *sc)
 		ft_printint(args, sc, format);
 	else if (*format == 'x' || *format == 'X')
 		ft_hex(args, sc, format);
+	else if (*format == '%')
+	{
+		write(1, "%", 1);
+		sc->len += 1;
+	}
 	else
 		return (NULL);
 	format++;

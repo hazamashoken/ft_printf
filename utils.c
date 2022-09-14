@@ -6,11 +6,19 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 10:30:38 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 21:03:18 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 21:18:32 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libftprintf.h"
+#include	"ft_printf.h"
+
+void	ft_printchr(va_list args, t_sc *sc)
+{
+	int	c;
+
+	c = va_arg(args, int);
+	sc->len += write(1, &c, 1);
+}
 
 void	ft_printint(va_list args, t_sc *sc, const char *format)
 {

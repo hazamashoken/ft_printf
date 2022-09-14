@@ -6,11 +6,11 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 20:14:15 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 20:56:07 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 21:15:55 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int main(void)
 {
