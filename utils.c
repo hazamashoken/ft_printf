@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 10:30:38 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 23:13:49 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 23:36:29 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ static int	ft_printhex(unsigned int x, const char *format)
 	else
 		hex = "0123456789ABCDEF";
 	i = 0;
-	res = (int *)malloc(sizeof(int) * ft_intlen((x), 16));
+	res = (int *)malloc(sizeof(int) * ft_uintlen((x), 16));
 	if (res == NULL)
 		return (0);
 	while (x >= 16)
