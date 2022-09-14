@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 10:30:38 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 21:56:30 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 22:31:50 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,15 +61,16 @@ void	ft_hex(va_list args, t_sc *sc, const char *format)
 	size_t	x;
 
 	x = va_arg(args, size_t);
-	ft_printhex((unsigned long)x, format);
-	sc->len += ft_intlen((unsigned long)x, 16);
+	ft_printhex((size_t)x, format);
+	sc->len += ft_intlen((size_t)x, 16);
 }
 
-void	ft_printhex(size_t x, const char *format)
+int	ft_printhex(size_t x, const char *format)
 {
 	char	*hex;
 	int		*res;
 	int		i;
+	int		len;
 
 	if (*format == 'x')
 		hex = "0123456789abcdef";
@@ -78,7 +79,7 @@ void	ft_printhex(size_t x, const char *format)
 	i = 0;
 	res = (int *)malloc(sizeof(int) * ft_intlen((x), 16));
 	if (res == NULL)
-		return ;
+		return (0);
 	while (x >= 16)
 	{
 		*(res + i) = hex[x % 16];
@@ -86,12 +87,9 @@ void	ft_printhex(size_t x, const char *format)
 		i++;
 	}
 	*(res + i) = hex[x];
+	len = i;
 	while (i >= 0)
-	{
-		ft_putchar_fd(res[i], 1);
-		i--;
-	}
+		ft_putchar_fd(res[i--], 1);
 	free (res);
+	return (len);
 }
-
-

@@ -4,7 +4,7 @@ TODO:
 	parser function
 
 REMARK:
-	i / d : LONG_MIN  zero
+	pointer: (void *)-1
 
 
 LINKS:

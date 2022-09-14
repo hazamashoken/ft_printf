@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 21:40:37 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 22:10:11 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 22:32:04 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,5 @@ void	ft_printaddr(va_list args, t_sc *sc)
 
 	addr = (void *)va_arg(args, size_t);
 	write(1, "0x", 2);
-	ft_printhex((size_t)addr, "x");
-	sc->len += ft_intlen((size_t)addr, 16) + 2;
+	sc->len += ft_printhex((size_t)addr, "x") + 2;
 }
