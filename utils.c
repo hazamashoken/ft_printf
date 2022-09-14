@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 10:30:38 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 22:53:19 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 23:13:49 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,6 @@ void	ft_hex(va_list args, t_sc *sc, const char *format)
 	size_t	x;
 
 	x = va_arg(args, size_t);
-	ft_printhex((size_t)x, format);
-	sc->len += ft_intlen((size_t)x, 16);
+	ft_printhex(x, format);
+	sc->len += ft_uintlen(x, 16);
 }

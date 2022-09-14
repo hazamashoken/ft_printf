@@ -6,7 +6,7 @@
 /*   By: tliangso <earth78203@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 21:40:37 by tliangso          #+#    #+#             */
-/*   Updated: 2022/09/14 22:50:57 by tliangso         ###   ########.fr       */
+/*   Updated: 2022/09/14 23:13:23 by tliangso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,23 @@ size_t	ft_intlen(long int nb, int div)
 		i++;
 	}
 	return (i + neg);
+}
+
+size_t	ft_uintlen(unsigned int nb, int div)
+{
+	int			i;
+	long int	number;
+
+	i = 0;
+	if (!nb)
+		return (1);
+	number = nb;
+	while (number)
+	{
+		number /= div;
+		i++;
+	}
+	return (i);
 }
 
 static int	ft_printhexaddr(size_t x, const char *format)
